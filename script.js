@@ -54,6 +54,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             font-size: 16px;
             margin-right: 10px;
         }
+        #sub_btn:hover{
+            transform: scale(1.07);
+        }
         #container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -151,6 +154,32 @@ document.addEventListener("DOMContentLoaded", async () => {
             transform: scale(1.1); 
             background-color: #555; 
         }
+        form button{
+            background-color: #28a745;
+            color: white;
+                      
+            padding: 10px 20px;       
+            font-size: 16px;          
+            font-weight: bold;        
+            border: none;             
+            border-radius: 5px; 
+            justify-content : center;
+            
+        }
+        
+        form button:hover {
+            transform: scale(1.05);
+            background-color: #555;
+        }
+        #form_container{
+            display: block;
+            width: 100%;
+        }
+        input {
+            width: 100%;
+            padding: 12px 20px;
+            box-sizing: border-box;
+          }
     `;
 
     const styleSheet = document.createElement("style");
@@ -240,6 +269,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const renderForm = () => {
         container.innerHTML = `
             <form id="product-form">
+                <div id="form_container">
                 <h3>Product Name</h3>
                 <input class="inp" type="text" required><br>
                 <h3>Price</h3>
@@ -249,6 +279,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <h3>Quantity</h3>
                 <input type="number" class="inp" required><br>
                 <button type="submit" id="submit-product">Submit</button>
+                </div>
             </form>
         `;
         document.getElementById("product-form").addEventListener("submit", (e) => {
@@ -302,9 +333,17 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (sortBy === "name") {
             products.sort((a, b) => a.name.localeCompare(b.name));
         } else if (sortBy === "priceLow") {
-            products.sort((a, b) => a.price - b.price);
+            products.sort(
+                (a, b) =>
+                    parseFloat(a.price.replace(/[^0-9.]/g, "")) -
+                    parseFloat(b.price.replace(/[^0-9.]/g, ""))
+            );
         } else if (sortBy === "priceHigh") {
-            products.sort((a, b) => b.price - a.price);
+            products.sort(
+                (a, b) =>
+                    parseFloat(b.price.replace(/[^0-9.]/g, "")) -
+                    parseFloat(a.price.replace(/[^0-9.]/g, ""))
+            );
         }
         renderPage(1);
     });
