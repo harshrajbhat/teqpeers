@@ -61,5 +61,152 @@
         "price": "₹1400",
         "description": "The Fire-Boltt Smartwatch offers a 1.3 HD display, SpO2 and fitness tracking, IP67 waterproofing, and an 8-day battery life.",
         "image": "static/firebolt.jpg"
+    },
+    {
+        "name": "Teddy Bear",
+        "quantity": 5,
+        "price": "₹2400",
+        "description": "Soft and cuddly teddy bear, 2 feet tall, perfect for gifting and decorating.",
+        "image": "static/teddy.jpg"
+    },
+    {
+        "name": "Designer Dress",
+        "quantity": 3,
+        "price": "₹1100",
+        "description": "Elegant evening dress with sequins, available in multiple colors and sizes.",
+        "image": "static/dress.jpg"
+    },
+    {
+        "name": "Wireless Neckband",
+        "quantity": 10,
+        "price": "₹4400",
+        "description": "Bluetooth earbuds with noise cancellation and 20-hour battery life.",
+        "image": "static/neckband.jpg"
+    },
+    {
+        "name": "Remote Control Car",
+        "quantity": 4,
+        "price": "₹2000",
+        "description": "High-speed remote control car with rechargeable batteries.",
+        "image": "static/car.jpg"
+    },
+    {
+        "name": "Gift Box Set",
+        "quantity": 6,
+        "price": "₹2410",
+        "description": "Luxury gift box set containing chocolates, candles, and a greeting card.",
+        "image": "static/giftbox.jpg"
+    },
+    {
+        "name": "Gaming Mouse",
+        "quantity": 8,
+        "price": "₹700",
+        "description": "Ergonomic gaming mouse with customizable DPI settings and RGB lighting.",
+        "image": "static/mouse.jpg"
+    },
+    {
+        "name": "Yoga Mat",
+        "quantity": 12,
+        "price": "₹1000",
+        "description": "Non-slip yoga mat with extra cushioning for comfort and durability.",
+        "image": "static/yogamat.jpg"
+    },
+    {
+        "name": "Coffee Maker",
+        "quantity": 5,
+        "price": "₹9000",
+        "description": "Compact coffee maker with programmable settings for brewing fresh coffee.",
+        "image": "static/coffeemaker.jpg"
+    },
+    {
+        "name": "Bluetooth Speaker",
+        "quantity": 9,
+        "price": "₹2500",
+        "description": "Portable Bluetooth speaker with deep bass and 10-hour battery life.",
+        "image": "static/speaker.jpg"
+    },
+    {
+        "name": "Sketchbook Set",
+        "quantity": 15,
+        "price": "₹700",
+        "description": "Set of premium sketchbooks with acid-free paper for artists and designers.",
+        "image": "static/sketchbook.jpg"
+    },
+    {
+        "name": "Electric Kettle",
+        "quantity": 6,
+        "price": "₹590",
+        "description": "1.5L stainless steel electric kettle with auto shut-off feature.",
+        "image": "static/kettle.jpg"
+    },
+    {
+        "name": "Board Game",
+        "quantity": 7,
+        "price": "₹700",
+        "description": "Exciting strategy board game for family and friends, suitable for ages 8+.",
+        "image": "static/boardgame.jpg"
+    },
+    {
+        "name": "Sunglasses",
+        "quantity": 20,
+        "price": "₹1200",
+        "description": "Stylish UV-protected sunglasses with polarized lenses.",
+        "image": "static/sunglasses.jpg"
+    },
+    {
+        "name": "Action Figure",
+        "quantity": 4,
+        "price": "₹1500",
+        "description": "Highly detailed action figure with articulated joints for collectors.",
+        "image": "static/actionfigure.jpg"
+    },
+    {
+        "name": "Digital Alarm Clock",
+        "quantity": 10,
+        "price": "₹490",
+        "description": "Compact digital alarm clock with LED display and snooze function.",
+        "image": "static/alarmclock.jpg"
+    },
+    {
+        "name": "Handbag",
+        "quantity": 3,
+        "price": "₹2800",
+        "description": "Elegant leather handbag with multiple compartments for daily use.",
+        "image": "static/handbag.jpg"
+    },
+    {
+        "name": "Laptop Stand",
+        "quantity": 8,
+        "price": "₹400",
+        "description": "Adjustable aluminum laptop stand with ventilation design.",
+        "image": "static/laptopstand.jpg"
+    },
+    {
+        "name": "Portable Charger",
+        "quantity": 11,
+        "price": "₹1900",
+        "description": "10,000mAh power bank with fast charging capabilities and dual USB ports.",
+        "image": "static/charger.jpg"
+    },
+    {
+        "name": "Table Lamp",
+        "quantity": 5,
+        "price": "₹3000",
+        "description": "LED table lamp with touch control and adjustable brightness levels.",
+        "image": "static/tablelamp.jpg"
+    },
+    {
+        "name": "Cooking Pan",
+        "quantity": 7,
+        "price": "₹1200",
+        "description": "Non-stick cooking pan with heat-resistant handle, suitable for all stovetops.",
+        "image": "static/cookingpan.jpg"
+    },
+    {
+        "name": "Water Bottle",
+        "quantity": 13,
+        "price": "₹300",
+        "description": "Insulated stainless steel water bottle, keeps drinks hot or cold for 12 hours.",
+        "image": "static/waterbottle.jpg"
     }
 ]
