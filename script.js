@@ -54,6 +54,20 @@ document.addEventListener("DOMContentLoaded", async () => {
             font-size: 16px;
             margin-right: 10px;
         }
+        #avg_btn {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        #avg_btn:hover{
+            transform: scale(1.07);
+        }
         #sub_btn:hover{
             transform: scale(1.07);
         }
@@ -187,7 +201,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     styleSheet.innerText = styles;
     document.head.appendChild(styleSheet);
 
-    // Fetch data
+    
     const response = await fetch("data.json");
     const products = await response.json();
 
@@ -202,6 +216,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <button type="submit" class="s-button">Search</button>
             </form>
             <button id="sub_btn">ADD PRODUCT</button>
+            <button id="avg_btn">AVG</button>
             <select id="sort-dropdown">
                 <option value="" disabled selected>Sort By</option>
                 <option value="name">Name (A-Z)</option>
@@ -218,6 +233,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         </div>
     `;
 
+    const avgbtn = document.getElementById('avg_btn')
     const container = document.getElementById("container");
     const searchBox = document.getElementById("search-box");
     const sortDropdown = document.getElementById("sort-dropdown");
@@ -227,6 +243,36 @@ document.addEventListener("DOMContentLoaded", async () => {
     const nextPageButton = document.getElementById("nextpage");
     const pageNumbers = document.getElementById("page-numbers");
     const addProd = document.getElementById("sub_btn");
+
+    
+   
+    function averageOfProducts(products) {
+        if (!Array.isArray(products) || products.length === 0) {
+            console.error("Invalid or empty products array");
+            return []; 
+        }
+    
+        const sum = products.reduce((acc, product) => acc + parseFloat(product.price.replace('₹', '')), 0);
+        const avgOfProducts = sum / products.length;
+    
+        const aboveAverageProducts = products.filter(product => {
+            const price = parseFloat(product.price.replace('₹', ''));
+            return price > avgOfProducts;
+        });
+    
+        return aboveAverageProducts; 
+    }
+    
+    function removeRepeatedElements(products) {
+        
+    }
+    
+    avgbtn.addEventListener('click', function () {
+        const aboveAverageProducts = averageOfProducts(products);
+        displayCards(aboveAverageProducts);
+    });
+    
+    
 
     const displayCards = (productsToShow) => {
         container.innerHTML = "";
@@ -287,6 +333,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             alert("Product added successfully!");
         });
     };
+    addProd.addEventListener("click", renderForm);
 
     const renderPage = (page) => {
         const start = (page - 1) * ITEMS_PER_PAGE;
@@ -348,7 +395,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         renderPage(1);
     });
 
-    addProd.addEventListener("click", renderForm);
+  
 
     renderPage(currentPage);
 });
